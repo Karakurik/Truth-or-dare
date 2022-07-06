@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Truth-or-dare</string>
+    <string name="end">завершить</string>
+    <string name="truth">правда</string>
+    <string name="dare">действие</string>
+    <string name="random">случайно</string>
 </resources>
