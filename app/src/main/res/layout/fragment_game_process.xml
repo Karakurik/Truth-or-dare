@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Button
-        android:id="@+id/bt_end"
+        android:id="@+id/btn_end"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:text="@string/end"
@@ -30,7 +30,7 @@
         android:fontFamily="sans-serif-medium" />
 
     <TextView
-        android:id="@+id/turn"
+        android:id="@+id/tv_turn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tv_player_name"
@@ -41,34 +41,34 @@
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/bt_truth"
+        android:id="@+id/btn_truth"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:text="@string/truth"
         app:backgroundTint="@color/teal_700"
-        app:layout_constraintTop_toBottomOf="@id/turn"
+        app:layout_constraintTop_toBottomOf="@id/tv_turn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/bt_dare"
+        app:layout_constraintEnd_toStartOf="@id/btn_dare"
         android:layout_marginTop="200dp" />
 
     <Button
-        android:id="@+id/bt_dare"
+        android:id="@+id/btn_dare"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:text="@string/dare"
         app:backgroundTint="@color/teal_700"
-        app:layout_constraintTop_toBottomOf="@id/turn"
-        app:layout_constraintStart_toEndOf="@id/bt_truth"
+        app:layout_constraintTop_toBottomOf="@id/tv_turn"
+        app:layout_constraintStart_toEndOf="@id/btn_truth"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="200dp" />
 
     <Button
-        android:id="@+id/bt_random"
+        android:id="@+id/btn_random"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:text="@string/random"
         app:backgroundTint="@color/teal_700"
-        app:layout_constraintTop_toBottomOf="@id/bt_dare"
+        app:layout_constraintTop_toBottomOf="@id/btn_dare"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="25dp" />

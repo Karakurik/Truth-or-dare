@@ -19,9 +19,5 @@
         android:id="@+id/taskFragment"
         android:name="ru.itis.team4.truth_or_dare.game_process.TaskFragment"
         android:label="TaskFragment"
-        tools:layout="@layout/fragment_task">
-        <action
-            android:id="@+id/action_taskFragment_to_gameProcessFragment"
-            app:destination="@id/gameProcessFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_task"/>
 </navigation>

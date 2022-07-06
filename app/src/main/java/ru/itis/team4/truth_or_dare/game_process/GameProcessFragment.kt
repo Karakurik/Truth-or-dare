@@ -18,22 +18,22 @@ class GameProcessFragment : Fragment(R.layout.fragment_game_process){
         _binding = FragmentGameProcessBinding.bind(view)
 
         with (binding) {
-            btEnd.setOnClickListener {
-                TODO("переход к результатам")
+            btnEnd.setOnClickListener {
+                // TODO: "переход к результатам"
             }
-            btTruth.setOnClickListener {
+            btnTruth.setOnClickListener {
                 findNavController().navigate(
                     R.id.action_gameProcessFragment_to_taskFragment,
-                    TaskFragment.createBundle(btTruth.text.toString())
+                    TaskFragment.createBundle(btnTruth.text.toString())
                 )
             }
-            btDare.setOnClickListener{
+            btnDare.setOnClickListener{
                 findNavController().navigate(
                     R.id.action_gameProcessFragment_to_taskFragment,
-                    TaskFragment.createBundle(btDare.text.toString())
+                    TaskFragment.createBundle(btnDare.text.toString())
                 )
             }
-            btRandom.setOnClickListener {
+            btnRandom.setOnClickListener {
                 findNavController().navigate(
                     R.id.action_gameProcessFragment_to_taskFragment,
                     TaskFragment.createBundle(getRandomTaskName())
@@ -44,9 +44,9 @@ class GameProcessFragment : Fragment(R.layout.fragment_game_process){
 
     private fun getRandomTaskName(): String {
         return if ((1..3).random() == 1) {
-            binding.btTruth.text.toString()
+            binding.btnTruth.text.toString()
         } else {
-            binding.btDare.text.toString()
+            binding.btnDare.text.toString()
         }
     }
 

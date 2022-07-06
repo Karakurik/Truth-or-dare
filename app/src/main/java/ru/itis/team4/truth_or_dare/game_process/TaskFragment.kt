@@ -24,21 +24,17 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
             }
 
             ibCancel.setOnClickListener {
-                findNavController().navigate(
-                    R.id.action_taskFragment_to_gameProcessFragment
-                )
-                TODO("отказ выполнять задание - 0 очков или в минус. Как хочешь")
+                findNavController().navigateUp()
+                // TODO: "отказ выполнять задание - 0 очков или в минус. Как хочешь"
             }
 
             ibRefresh.setOnClickListener {
-                TODO("новый вопрос")
+                // TODO: "новый вопрос"
             }
 
             ibDone.setOnClickListener {
-                findNavController().navigate(
-                    R.id.action_taskFragment_to_gameProcessFragment
-                )
-                TODO("задание выполнено - плюс сколько-то очков очков")
+                findNavController().navigateUp()
+                // TODO: "задание выполнено - плюс сколько-то очков очков"
             }
         }
     }
