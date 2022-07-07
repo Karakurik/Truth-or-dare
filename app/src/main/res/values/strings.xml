@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Truth-or-dare</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="game_results">Результаты игры</string>
+    <string name="Close">Закрыть</string>
 </resources>
