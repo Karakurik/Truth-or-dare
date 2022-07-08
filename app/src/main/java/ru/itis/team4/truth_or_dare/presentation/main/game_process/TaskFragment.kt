@@ -1,4 +1,4 @@
-package ru.itis.team4.truth_or_dare.game_process
+package ru.itis.team4.truth_or_dare.presentation.main.game_process
 
 import android.os.Bundle
 import android.view.View

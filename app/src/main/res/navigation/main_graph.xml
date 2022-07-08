@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/gameProcessFragment"
-        android:name="ru.itis.team4.truth_or_dare.game_process.GameProcessFragment"
+        android:name="ru.itis.team4.truth_or_dare.presentation.main.game_process.GameProcessFragment"
         android:label="GameProcessFragment"
         tools:layout="@layout/fragment_game_process">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/taskFragment"
-        android:name="ru.itis.team4.truth_or_dare.game_process.TaskFragment"
+        android:name="ru.itis.team4.truth_or_dare.presentation.main.game_process.TaskFragment"
         android:label="TaskFragment"
         tools:layout="@layout/fragment_task"/>
 </navigation>
