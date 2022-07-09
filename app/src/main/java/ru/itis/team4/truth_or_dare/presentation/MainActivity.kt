@@ -1,4 +1,4 @@
-package ru.itis.team4.truth_or_dare.presentation.main
+package ru.itis.team4.truth_or_dare.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
