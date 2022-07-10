@@ -1,7 +1,7 @@
 package ru.itis.team4.truth_or_dare.presentation.category_selection.questions
 
 object HardDareRepository {
-    val hardDareList = arrayListOf(
+    val hardDareList = mutableSetOf(
         "Позвоните по случайно подобранному номеру телефона и проведите короткий сеанс \"Секса по телефону\", заранее предупредив абонента, что в эту ночь эта услуга для него абсолютно бесплатна",
         "Изобрази оргазм противоположного пола",
         "Нарисуй портрет игрока PLAYER в обнажённом виде",

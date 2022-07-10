@@ -1,7 +1,7 @@
 package ru.itis.team4.truth_or_dare.presentation.category_selection.questions
 
 object LiteDareRepository {
-    val liteDareList = arrayListOf(
+    val liteDareList = mutableSetOf(
         "Изобрази полёт шмеля",
         "Исполни танец живота на табуретке для игрока PLAYER",
         "Собрать как можно больше отпечатков губ на своём лице",

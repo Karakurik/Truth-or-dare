@@ -1,7 +1,7 @@
 package ru.itis.team4.truth_or_dare.presentation.category_selection.questions
 
 object HardTruthRepository {
-    val hardTruthList = arrayListOf(
+    val hardTruthList = mutableSetOf(
         "На какой порносайт ты чаще всего заходишь?",
         "Секс с незнакомцем, секс втроём, есть ли у тебя смелая эротическая мечта? Ты собираешься её реализовать?",
         "В каком возрасте ты впервые занялся(-ась) сексом?",
