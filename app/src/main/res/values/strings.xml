@@ -13,4 +13,7 @@
     <string name="end">завершить</string>
     <string name="random">случайно</string>
     <string name="your_turn">Ваш ход</string>
+    <string name="game_results">Результаты игры</string>
+    <string name="close">Закрыть</string>
+    <string name="player_name">Имя игрока</string>
 </resources>

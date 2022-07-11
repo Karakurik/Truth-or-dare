@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_gameProcessFragment_to_taskFragment"
             app:destination="@id/taskFragment" />
+        <action
+            android:id="@+id/action_gameProcessFragment_to_fragmentResults"
+            app:destination="@id/fragmentResults" />
     </fragment>
 
     <fragment
@@ -49,5 +52,15 @@
         android:name="ru.itis.team4.truth_or_dare.presentation.game_process.TaskFragment"
         android:label="TaskFragment"
         tools:layout="@layout/fragment_task"/>
+
+    <fragment
+        android:id="@+id/fragmentResults"
+        android:name="ru.itis.team4.truth_or_dare.presentation.result_screen.FragmentResults"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" >
+        <action
+            android:id="@+id/action_fragmentResults_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 
 </navigation>

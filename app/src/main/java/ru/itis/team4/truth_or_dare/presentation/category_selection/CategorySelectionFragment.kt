@@ -25,10 +25,10 @@ class CategorySelectionFragment : Fragment(R.layout.fragment_category_selection)
         _binding = FragmentCategorySelectionBinding.bind(view)
 
         with (binding) {
-            flLiteMode.setOnClickListener {
+            cvLiteMode.setOnClickListener {
                 navigateToGameProcess(LITE_MODE_TRUTH, LITE_MODE_DARE)
             }
-            flHardMode.setOnClickListener {
+            cvHardMode.setOnClickListener {
                 navigateToGameProcess(HARD_MODE_TRUTH, HARD_MODE_DARE)
             }
             btnAddToLm.setOnClickListener {

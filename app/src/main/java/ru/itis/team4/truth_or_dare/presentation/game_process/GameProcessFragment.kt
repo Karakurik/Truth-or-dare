@@ -1,5 +1,6 @@
 package ru.itis.team4.truth_or_dare.presentation.game_process
 
+import android.hardware.Sensor
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -31,7 +32,10 @@ class GameProcessFragment : Fragment(R.layout.fragment_game_process) {
             tvPlayerName.text = players[playerPos].getNamePlayer()
 
             btnEnd.setOnClickListener {
-                // TODO: "переход к результатам"
+                playerPos--
+                findNavController().navigate(
+                    R.id.action_gameProcessFragment_to_fragmentResults
+                )
             }
 
             btnTruth.setOnClickListener {
