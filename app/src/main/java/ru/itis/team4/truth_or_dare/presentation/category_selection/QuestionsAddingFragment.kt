@@ -36,12 +36,16 @@ class QuestionsAddingFragment : Fragment(R.layout.fragment_questions_adding) {
 
             btnToTruth.setOnClickListener {
                 addQuestion(etQuestion.text.toString(), text, liteTruthList, hardTruthList)
-                findNavController().navigateUp()
+                if (etQuestion.text.isNotEmpty()) {
+                    findNavController().navigateUp()
+                }
             }
 
             btnToDare.setOnClickListener {
                 addQuestion(etQuestion.text.toString(), text, liteDareList, hardDareList)
-                findNavController().navigateUp()
+                if (etQuestion.text.isNotEmpty()) {
+                    findNavController().navigateUp()
+                }
             }
         }
     }
@@ -62,8 +66,8 @@ class QuestionsAddingFragment : Fragment(R.layout.fragment_questions_adding) {
                 hardSet.add(question)
                 updateSP(hardSet)
             }
+            Toast.makeText(context, "Вопрос успешно добавлен", Toast.LENGTH_SHORT).show()
         }
-        Toast.makeText(context, "Вопрос успешно добавлен", Toast.LENGTH_SHORT).show()
     }
 
     private fun updateSP(list: MutableSet<String>) {

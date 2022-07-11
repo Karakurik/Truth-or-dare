@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -8,15 +7,15 @@
     android:layout_marginTop="12dp"
     android:layout_marginEnd="8dp"
     app:cardCornerRadius="12dp"
-
     xmlns:tool="http://schemas.android.com/tools">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:background="@color/teal_700"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/playername"
+            android:id="@+id/tv_player_name"
             android:layout_width="match_parent"
             android:layout_height="28dp"
             android:paddingTop="12dp"
@@ -29,20 +28,20 @@
             />
 
         <TextView
-            android:id="@+id/playermoves"
+            android:id="@+id/tv_player_moves"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:paddingTop="4dp"
-            app:layout_constraintStart_toStartOf="@+id/playername"
-            app:layout_constraintTop_toBottomOf="@+id/playername"
+            app:layout_constraintStart_toStartOf="@+id/tv_player_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_player_name"
             android:textColor="@color/white"
             tool:text="0 true/ 0 actions/ 0 surrender"
             />
 
         <TextView
-            android:id="@+id/playerscore"
+            android:id="@+id/tv_player_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tool:text="11"
@@ -55,8 +54,5 @@
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    
-
 
 </com.google.android.material.card.MaterialCardView>

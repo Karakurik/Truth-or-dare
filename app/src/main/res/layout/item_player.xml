@@ -32,7 +32,7 @@
                 android:freezesText="false"
                 android:inputType="textPersonName|textCapSentences"
                 android:textSize="20sp"
-                android:hint="Имя игрока" />
+                android:hint="@string/player_name" />
 
             <ImageButton
                 android:id="@+id/imageButton"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="10dp"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/teal_700"
                 app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
         </RelativeLayout>

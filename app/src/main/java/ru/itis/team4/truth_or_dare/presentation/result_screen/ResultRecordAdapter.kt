@@ -1,11 +1,12 @@
-package ru.itis.team4.truth_or_dare.presentation.ResultsScreen
+package ru.itis.team4.truth_or_dare.presentation.result_screen
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.itis.team4.truth_or_dare.databinding.ItemResultsBinding
+import ru.itis.team4.truth_or_dare.presentation.main_screen.PlayerRegistration
 
-class ResultRecordAdapter(private val list: List<ResultRecord>)
+class ResultRecordAdapter(private val list: ArrayList<PlayerRegistration>)
     : RecyclerView.Adapter<ResultRecordHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -23,6 +24,4 @@ class ResultRecordAdapter(private val list: List<ResultRecord>)
     override fun getItemCount(): Int {
         return list.size
     }
-
-
 }
