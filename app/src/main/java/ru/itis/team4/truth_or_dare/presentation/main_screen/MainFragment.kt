@@ -3,6 +3,7 @@ package ru.itis.team4.truth_or_dare.presentation.main_screen
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import ru.itis.team4.truth_or_dare.R
 import ru.itis.team4.truth_or_dare.databinding.FragmentMainBinding
@@ -30,7 +31,9 @@ class MainFragment: Fragment(R.layout.fragment_main) {
         }
 
         binding.btnOnw.setOnClickListener {
-            //переход на следующий экран
+            findNavController().navigate(
+                R.id.action_mainFragment_to_categorySelectionFragment
+            )
         }
     }
     private fun populateList(): ArrayList<PlayerRegistration> {

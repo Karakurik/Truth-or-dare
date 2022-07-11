@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:backgroundTint="@color/white"
-            android:text="+"
+            android:text="@string/add"
             android:textColor="@color/black"
             android:textSize="24sp" />
 
@@ -64,7 +64,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginBottom="15dp"
             android:backgroundTint="@color/white"
-            android:text="Start"
+            android:text="@string/start"
             android:textColor="@color/black"
             android:textSize="24sp" />
 

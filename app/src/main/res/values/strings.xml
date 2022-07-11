@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Truth or Dare</string>
     <string name="add_player">Добавляй игроков</string>
+    <string name="truth">Правда</string>
+    <string name="dare">Действие</string>
+    <string name="add_question_to">Добавить вопрос в</string>
+    <string name="input_question">Введите вопрос</string>
+    <string name="choose_game_mode">Выбери режим игры</string>
+    <string name="lite_mode">Lite Mode</string>
+    <string name="hard_mode">Hard Mode</string>
+    <string name="add">+</string>
+    <string name="start">Start</string>
+    <string name="end">завершить</string>
+    <string name="random">случайно</string>
+    <string name="your_turn">Ваш ход</string>
 </resources>

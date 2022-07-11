@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="title"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_task"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:text="TEXT"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="@id/tv_title"
+                app:layout_constraintBottom_toTopOf="@id/ib_done"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageButton
+                android:id="@+id/ib_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ib_done"
+                android:backgroundTint="@color/red"
+                android:src="@drawable/cancel"
+                style="@style/CardView" />
+
+            <ImageButton
+                android:id="@+id/ib_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ib_done"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="@color/yellow"
+                android:src="@drawable/refresh"
+                style="@style/CardView" />
+
+            <ImageButton
+                android:id="@+id/ib_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ib_cancel"
+                app:layout_constraintEnd_toStartOf="@id/ib_refresh"
+                android:backgroundTint="@color/green"
+                android:src="@drawable/done"
+                style="@style/CardView"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

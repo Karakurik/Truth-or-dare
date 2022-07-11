@@ -19,16 +19,33 @@ class CategorySelectionFragment : Fragment(R.layout.fragment_category_selection)
         _binding = FragmentCategorySelectionBinding.bind(view)
 
         with (binding) {
-            btnLite.setOnClickListener {
-                // TODO: переход на игровой экран с передачей сложности, списка вопросов
+            flLiteMode.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_categorySelectionFragment_to_gameProcessFragment
+                )
             }
-            btnHard.setOnClickListener{
-                // TODO: переход на игровой экран с передачей сложности, списка вопросов
+            flHardMode.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_categorySelectionFragment_to_gameProcessFragment
+                )
+            }
+            btnAddToLm.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_categorySelectionFragment_to_questionsAddingFragment,
+                    QuestionsAddingFragment.createBundle("lite mode")
+                )
+            }
+            btnAddToHm.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_categorySelectionFragment_to_questionsAddingFragment,
+                    QuestionsAddingFragment.createBundle("hard mode")
+                )
             }
         }
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        _binding = null
     }
 }

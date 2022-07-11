@@ -1,7 +1,7 @@
 package ru.itis.team4.truth_or_dare.presentation.category_selection.questions
 
 object LiteTruthRepository {
-    val liteTruthList = arrayListOf(
+    val liteTruthList = mutableSetOf(
         "Какой самый нелепый случай в школе у тебя был?",
         "Что бы ты сделал(а), если бы узнал(а), что ты приёмный ребёнок?",
         "Ты когда-нибудь позорился(-ась) на глазах у толпы?",
