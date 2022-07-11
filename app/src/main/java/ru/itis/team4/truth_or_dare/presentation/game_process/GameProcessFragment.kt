@@ -6,47 +6,78 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import ru.itis.team4.truth_or_dare.R
 import ru.itis.team4.truth_or_dare.databinding.FragmentGameProcessBinding
+import ru.itis.team4.truth_or_dare.presentation.main_screen.PlayerRegistration
 
-class GameProcessFragment : Fragment(R.layout.fragment_game_process){
+class GameProcessFragment : Fragment(R.layout.fragment_game_process) {
 
     private var _binding: FragmentGameProcessBinding? = null
     private val binding get() = _binding!!
+
+    private var playerPos: Int = -1
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         _binding = FragmentGameProcessBinding.bind(view)
 
+        if (playerPos == players.size - 1) {
+            playerPos = 0
+        } else {
+            playerPos++
+        }
+
         with (binding) {
+
+            tvPlayerName.text = players[playerPos].getNamePlayer()
+
             btnEnd.setOnClickListener {
                 // TODO: "переход к результатам"
             }
+
             btnTruth.setOnClickListener {
-                findNavController().navigate(
-                    R.id.action_gameProcessFragment_to_taskFragment,
-                    TaskFragment.createBundle(btnTruth.text.toString())
-                )
+                navigateToTask(btnTruth.text.toString())
             }
+
             btnDare.setOnClickListener{
-                findNavController().navigate(
-                    R.id.action_gameProcessFragment_to_taskFragment,
-                    TaskFragment.createBundle(btnDare.text.toString())
-                )
+                navigateToTask(btnDare.text.toString())
             }
+
             btnRandom.setOnClickListener {
                 findNavController().navigate(
                     R.id.action_gameProcessFragment_to_taskFragment,
-                    TaskFragment.createBundle(getRandomTaskName())
+                    TaskFragment.createBundle(getRandomTaskInfo())
                 )
             }
         }
     }
 
-    private fun getRandomTaskName(): String {
-        return if ((1..3).random() == 1) {
-            binding.btnTruth.text.toString()
+    private fun navigateToTask(title: String) {
+        findNavController().navigate(
+            R.id.action_gameProcessFragment_to_taskFragment,
+            TaskFragment.createBundle(
+                arrayOf(
+                    title,
+                    "$playerPos"
+                )
+            )
+        )
+    }
+
+    companion object {
+        var players: ArrayList<PlayerRegistration> = arrayListOf()
+    }
+
+    private fun getRandomTaskInfo(): Array<String> {
+        return if ((1 until 3).random() == 1) {
+            arrayOf(
+                binding.btnTruth.text.toString(),
+                "$playerPos",
+            )
         } else {
-            binding.btnDare.text.toString()
+            arrayOf(
+                binding.btnDare.text.toString(),
+                "$playerPos"
+            )
         }
     }
 

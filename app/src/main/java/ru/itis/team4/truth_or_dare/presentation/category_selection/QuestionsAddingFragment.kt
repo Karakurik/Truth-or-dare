@@ -1,6 +1,6 @@
 package ru.itis.team4.truth_or_dare.presentation.category_selection
 
-import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -10,7 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import ru.itis.team4.truth_or_dare.R
 import ru.itis.team4.truth_or_dare.databinding.FragmentQuestionsAddingBinding
-import ru.itis.team4.truth_or_dare.presentation.MainActivity
+import ru.itis.team4.truth_or_dare.presentation.MainActivity.Companion.HARD_MODE_DARE
+import ru.itis.team4.truth_or_dare.presentation.MainActivity.Companion.HARD_MODE_TRUTH
+import ru.itis.team4.truth_or_dare.presentation.MainActivity.Companion.LITE_MODE_DARE
+import ru.itis.team4.truth_or_dare.presentation.MainActivity.Companion.LITE_MODE_TRUTH
+import ru.itis.team4.truth_or_dare.presentation.MainActivity.Companion.PREFERENCE
 import ru.itis.team4.truth_or_dare.presentation.category_selection.questions.HardDareRepository.hardDareList
 import ru.itis.team4.truth_or_dare.presentation.category_selection.questions.HardTruthRepository.hardTruthList
 import ru.itis.team4.truth_or_dare.presentation.category_selection.questions.LiteDareRepository.liteDareList
@@ -59,16 +63,17 @@ class QuestionsAddingFragment : Fragment(R.layout.fragment_questions_adding) {
                 updateSP(hardSet)
             }
         }
+        Toast.makeText(context, "Вопрос успешно добавлен", Toast.LENGTH_SHORT).show()
     }
 
     private fun updateSP(list: MutableSet<String>) {
-        val pref = activity?.getSharedPreferences(MainActivity.PREFERENCE, Context.MODE_PRIVATE)
+        val pref = activity?.getSharedPreferences(PREFERENCE, MODE_PRIVATE)
         pref?.edit {
             when (list) {
-                liteTruthList -> putStringSet(MainActivity.LITE_MODE_TRUTH, list)
-                liteDareList -> putStringSet(MainActivity.LITE_MODE_DARE, list)
-                hardTruthList -> putStringSet(MainActivity.HARD_MODE_TRUTH, list)
-                hardDareList -> putStringSet(MainActivity.HARD_MODE_DARE, list)
+                liteTruthList -> putStringSet(LITE_MODE_TRUTH, list)
+                liteDareList -> putStringSet(LITE_MODE_DARE, list)
+                hardTruthList -> putStringSet(HARD_MODE_TRUTH, list)
+                hardDareList -> putStringSet(HARD_MODE_DARE, list)
             }
             commit()
         }
