@@ -2,7 +2,6 @@ package ru.itis.team4.truth_or_dare.presentation.game_process
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import ru.itis.team4.truth_or_dare.R

@@ -71,7 +71,7 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
                 "PLAYER",
                 players.filter {
                     it != player
-                }[(0 until players.size).random()].getNamePlayer()!!
+                }[(0 until players.size - 1).random()].getNamePlayer()!!
             )
         } else {
             task
@@ -86,5 +86,10 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
 
         var truthQuestions: MutableSet<String> = mutableSetOf()
         var dareQuestions: MutableSet<String> = mutableSetOf()
+    }
+
+    override fun onDestroy() {
+        _binding = null
+        super.onDestroy()
     }
 }
