@@ -7,6 +7,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import ru.itis.team4.truth_or_dare.R
 import ru.itis.team4.truth_or_dare.databinding.FragmentMainBinding
+import ru.itis.team4.truth_or_dare.presentation.game_process.GameProcessFragment
 
 class MainFragment: Fragment(R.layout.fragment_main) {
 
@@ -31,6 +32,7 @@ class MainFragment: Fragment(R.layout.fragment_main) {
         }
 
         binding.btnOnw.setOnClickListener {
+            GameProcessFragment.players = playerList
             findNavController().navigate(
                 R.id.action_mainFragment_to_categorySelectionFragment
             )

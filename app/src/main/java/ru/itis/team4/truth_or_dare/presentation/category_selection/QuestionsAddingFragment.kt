@@ -59,6 +59,7 @@ class QuestionsAddingFragment : Fragment(R.layout.fragment_questions_adding) {
                 updateSP(hardSet)
             }
         }
+        Toast.makeText(context, "Вопрос успешно добавлен", Toast.LENGTH_SHORT).show()
     }
 
     private fun updateSP(list: MutableSet<String>) {
