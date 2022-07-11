@@ -10,4 +10,7 @@
     <string name="hard_mode">Hard Mode</string>
     <string name="add">+</string>
     <string name="start">Start</string>
+    <string name="end">завершить</string>
+    <string name="random">случайно</string>
+    <string name="your_turn">Ваш ход</string>
 </resources>

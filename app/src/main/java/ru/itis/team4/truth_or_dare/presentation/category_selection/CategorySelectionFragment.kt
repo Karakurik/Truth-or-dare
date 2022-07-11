@@ -20,10 +20,14 @@ class CategorySelectionFragment : Fragment(R.layout.fragment_category_selection)
 
         with (binding) {
             flLiteMode.setOnClickListener {
-                // TODO: игра 
+                findNavController().navigate(
+                    R.id.action_categorySelectionFragment_to_gameProcessFragment
+                )
             }
             flHardMode.setOnClickListener {
-                // TODO: игра 
+                findNavController().navigate(
+                    R.id.action_categorySelectionFragment_to_gameProcessFragment
+                )
             }
             btnAddToLm.setOnClickListener {
                 findNavController().navigate(

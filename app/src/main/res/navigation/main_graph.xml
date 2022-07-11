@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_categorySelectionFragment_to_questionsAddingFragment"
             app:destination="@id/questionsAddingFragment" />
+        <action
+            android:id="@+id/action_categorySelectionFragment_to_gameProcessFragment"
+            app:destination="@id/gameProcessFragment" />
     </fragment>
 
     <fragment
@@ -30,5 +33,21 @@
         android:name="ru.itis.team4.truth_or_dare.presentation.category_selection.QuestionsAddingFragment"
         android:label="QuestionsAddingFragment"
         tools:layout="@layout/fragment_questions_adding" />
+
+    <fragment
+        android:id="@+id/gameProcessFragment"
+        android:name="ru.itis.team4.truth_or_dare.presentation.game_process.GameProcessFragment"
+        android:label="GameProcessFragment"
+        tools:layout="@layout/fragment_game_process">
+        <action
+            android:id="@+id/action_gameProcessFragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="ru.itis.team4.truth_or_dare.presentation.game_process.TaskFragment"
+        android:label="TaskFragment"
+        tools:layout="@layout/fragment_task"/>
 
 </navigation>
